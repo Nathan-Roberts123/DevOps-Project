@@ -1,5 +1,6 @@
 data "aws_ami" "amazon-linux" {
   most_recent = true
+  owners = ["137112412989"]
 
   filter {
     name   = "name"
@@ -16,6 +17,7 @@ resource "aws_instance" "dev_machine" {
   ami = data.aws_ami.amazon-linux.id
   instance_type = "t2.micro"
   key_name = "euran-jenkins"
+  subnet_id = "subnet-037e65818dc0975b4"
 
   tags = {
     Environment = "dev"
