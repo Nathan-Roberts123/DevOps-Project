@@ -1,6 +1,5 @@
 - name: This sets up an httpd webserver
   hosts: aws_ec2
-  become: true
   gather_facts: true
   vars:
     ansible_ssh_private_key_file: "/etc/ansible/jenkins.pem"  
