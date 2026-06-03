@@ -14,7 +14,7 @@ data "aws_ami" "amazon-linux" {
 }
 
 resource "aws_instance" "dev_machine" {
-  ami = data.aws_ami.amazon-linux.id
+  ami = "ami-00e801948462f718a"
   instance_type = "t2.micro"
   key_name = "docker"
   subnet_id = "subnet-037e65818dc0975b4"
